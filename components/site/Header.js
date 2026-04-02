@@ -104,21 +104,7 @@ export default function Header() {
             </div>
           </div>
           <div className="right-block flex items-center gap-5">
-            <div className="select-block relative">
-              <select className="border-none outline-none bg-dark text-white p-2 caption2" aria-label="Site dili">
-                <option value="tr">Türkçe</option>
-              </select>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                fill="currentColor"
-                viewBox="0 0 256 256"
-                className="text-xs text-white icon -right-2"
-              >
-                <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z" />
-              </svg>
-            </div>
+       
             <div className="line h-6 w-px bg-grey max-sm:hidden"> </div>
             <div className="list-social flex items-center gap-2.5 style-one max-sm:hidden">
               <a

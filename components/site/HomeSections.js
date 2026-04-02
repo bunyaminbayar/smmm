@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import HomeFaq from "./HomeFaq";
+import HomeWhyIzmirSection from "./HomeWhyIzmirSection";
 
 const SERVICES = [
   {
@@ -47,29 +48,6 @@ const SERVICES = [
   },
 ];
 
-const CASES = [
-  {
-    img: "/images/hizmetler/muhasebe.png",
-    title: "Güvenilir danışmanlık",
-    desc: "İzmir ve çevresinde şeffaf iletişim ve ölçülebilir süreçlerle mali uyum hedefliyoruz.",
-  },
-  {
-    img: "/images/hizmetler/isletme.jpg",
-    title: "Yerel odak",
-    desc: "Çiğli ofisimizde yüz yüze görüşme; bölge ekonomisine ve KOBİ gerçeklerine hakim ekip.",
-  },
-  {
-    img: "/images/hizmetler/hesaplama.jpg",
-    title: "Güncel mevzuat",
-    desc: "Sık değişen vergi ve SGK düzenlemelerini işletmenize özel yorumlayıp uygulanabilir hale getiriyoruz.",
-  },
-  {
-    img: "/images/hizmetler/smmm-takip.jpg",
-    title: "Uzun soluklu iş ortaklığı",
-    desc: "Tek seferlik işlem değil, yıl boyu planlama ve dönemsel kontrollerle yanınızdayız.",
-  },
-];
-
 const BLOG_ITEMS = [
   {
     href: "/blog/blog-detail-one/investment-opportunities-explore-options",
@@ -90,14 +68,6 @@ const BLOG_ITEMS = [
     title: "E-fatura ve e-defter süreçlerinde dikkat edilecek noktalar",
   },
 ];
-
-function ArrowRight() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" className="text-xs mt-1">
-      <path d="M144.49,136.49l-80,80a12,12,0,0,1-17-17L119,128,47.51,56.49a12,12,0,0,1,17-17l80,80A12,12,0,0,1,144.49,136.49Zm80-17-80-80a12,12,0,1,0-17,17L199,128l-71.52,71.51a12,12,0,0,0,17,17l80-80A12,12,0,0,0,224.49,119.51Z" />
-    </svg>
-  );
-}
 
 export default function HomeSections() {
   return (
@@ -144,53 +114,7 @@ export default function HomeSections() {
         <div className="container w-full lg:py-[150px] pt-14 py-16">
           <div className="w-full flex items-center lg:justify-end">
             <div className="payment-infor lg:w-1/2 xl:pl-20 lg:pl-10">
-              <div className="heading flex items-center gap-4 max-lg:flex-wrap">
-                <div className="flex items-center">
-                  <div className="img sm:w-12 w-10 sm:h-12 h-10 rounded-full overflow-hidden bg-line p-0.5 z-[3]">
-                    <img
-                      alt=""
-                      loading="lazy"
-                      width={300}
-                      height={300}
-                      className="full h-full rounded-full"
-                      style={{ color: "transparent" }}
-                      src="/images/hizmetler/muhasebe.png"
-                    />
-                  </div>
-                  <div className="img sm:w-12 w-10 sm:h-12 h-10 rounded-full overflow-hidden bg-line p-0.5 z-[2] -ml-3">
-                    <img
-                      alt=""
-                      loading="lazy"
-                      width={300}
-                      height={300}
-                      className="full h-full rounded-full"
-                      style={{ color: "transparent" }}
-                      src="/images/hizmetler/hesaplama.jpg"
-                    />
-                  </div>
-                  <div className="img sm:w-12 w-10 sm:h-12 h-10 rounded-full overflow-hidden bg-line p-0.5 z-[1] -ml-3">
-                    <img
-                      alt=""
-                      loading="lazy"
-                      width={300}
-                      height={300}
-                      className="full h-full rounded-full"
-                      style={{ color: "transparent" }}
-                      src="/images/hizmetler/isletme.jpg"
-                    />
-                  </div>
-                  <div className="img sm:w-12 w-10 sm:h-12 h-10 rounded-full overflow-hidden bg-line p-0.5 z-[0] -ml-3">
-                    <span className="w-full h-full flex items-center justify-center bg-white rounded-full text-button">
-                      5M
-                    </span>
-                  </div>
-                </div>
-                <div className="text-button text-secondary">
-                  İzmir ve çevresinde
-                  <br />
-                  yerel işletmelere odaklı hizmet
-                </div>
-              </div>
+              
               <div className="text lg:mt-14 mt-5">
                 <h3 className="heading3">Çiğli’de yüz yüze, İzmir genelinde danışmanlık</h3>
                 <div className="body3 text-secondary lg:mt-6 mt-4">
@@ -228,15 +152,6 @@ export default function HomeSections() {
                       {siteConfig.phoneDisplay || siteConfig.email}
                     </span>
                   </Link>
-                  <img
-                    alt=""
-                    loading="lazy"
-                    width={4000}
-                    height={4000}
-                    className="absolute -right-12 w-[100px] h-auto top-1/2 -translate-y-1/2 max-lg:hidden"
-                    style={{ color: "transparent" }}
-                    src="/images/hizmetler/destek.jpg"
-                  />
                 </div>
               </div>
             </div>
@@ -244,64 +159,7 @@ export default function HomeSections() {
         </div>
       </section>
 
-      <section className="case-study-block style-one lg:pt-[100px] sm:pt-16 pt-10">
-        <div className="container">
-          <div className="heading text-center">
-            <h3 className="heading3">Neden İzmir’de bizi tercih etmelisiniz?</h3>
-            <div className="right flex flex-col items-center gap-2 mt-3">
-              <div className="body3 max-w-2xl">
-                Büyük şehir merkezli genel çözümler yerine, bölgenizin iş ölçeğine uygun mali müşavirlik yaklaşımı.
-              </div>
-              <Link className="flex items-center gap-2 hover:text-blue duration-300" href="/case-studies/case-studies-one">
-                <div className="text-button">Örnek çalışmalarımız</div>
-                <ArrowRight />
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="list-case-study md:mt-10 mt-6">
-          <div className="list grid lg:grid-cols-4 sm:grid-cols-2">
-            {CASES.map((c) => (
-              <div key={c.title} className="w-full">
-                <div className="case-study-item">
-                  <div className="bg-img">
-                    <img
-                      alt=""
-                      loading="lazy"
-                      width={5000}
-                      height={5000}
-                      className="w-full h-full block"
-                      style={{ color: "transparent" }}
-                      src={c.img}
-                    />
-                  </div>
-                  <div className="text flex flex-col justify-between gap-3">
-                    <div className="heading5">
-                      <Link className="text-white" href="/case-studies/case-studies-one">
-                        {c.title}
-                      </Link>
-                    </div>
-                    <div className="body2 text-white">{c.desc}</div>
-                    <Link className="flex items-center gap-1" href="/case-studies/case-studies-one">
-                      <div className="text-button text-white">Devamını oku </div>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        viewBox="0 0 256 256"
-                        className="text-xs text-white mt-1"
-                      >
-                        <path d="M144.49,136.49l-80,80a12,12,0,0,1-17-17L119,128,47.51,56.49a12,12,0,0,1,17-17l80,80A12,12,0,0,1,144.49,136.49Zm80-17-80-80a12,12,0,1,0-17,17L199,128l-71.52,71.51a12,12,0,0,0,17,17l80-80A12,12,0,0,0,224.49,119.51Z" />
-                      </svg>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HomeWhyIzmirSection />
 
       <section className="payment-gateway-one style-second lg:mt-[100px] sm:mt-16 mt-10">
         <div className="container">
@@ -330,44 +188,6 @@ export default function HomeSections() {
                 <Link className="button-main hover:bg-blue text-white bg-black rounded-full" href="/contact-two">
                   İletişim
                 </Link>
-              </div>
-            </div>
-            <div className="w-11/12 xl:w-7/12">
-              <div className="right pl-0 xl:pl-10">
-                <div className="bg-img">
-                  <img
-                    alt=""
-                    loading="lazy"
-                    width={5000}
-                    height={5000}
-                    className="w-full"
-                    style={{ color: "transparent" }}
-                    src="/images/hizmetler/destek.jpg"
-                  />
-                </div>
-                <div className="feature-item py-4 px-6 rounded-2xl bg-white inline-flex items-center gap-4 box-shadow">
-                  <i className="icon-list text-2xl bg-orange p-4 rounded-2xl"> </i>
-                  <div className="text">
-                    <div className="heading7">İzmir</div>
-                    <div className="heading7 text-secondary">Yerel hizmet</div>
-                  </div>
-                </div>
-                <div className="feature-item py-4 px-6 rounded-2xl bg-white inline-flex items-center gap-4 box-shadow">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" className="text-yellow text-3xl">
-                    <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z" />
-                  </svg>
-                  <div className="text">
-                    <div className="heading7">SMMM</div>
-                    <div className="heading7 text-secondary">Mesleki standart</div>
-                  </div>
-                </div>
-                <div className="feature-item py-4 px-6 rounded-2xl bg-white inline-flex items-center gap-4 box-shadow">
-                  <i className="icon-user text-2xl bg-orange py-4 px-5 rounded-2xl"> </i>
-                  <div className="text">
-                    <div className="heading7">Çiğli</div>
-                    <div className="heading7 text-secondary">Ofis randevusu</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

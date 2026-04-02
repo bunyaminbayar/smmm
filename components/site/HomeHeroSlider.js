@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 const slides = [
   {
     variant: "slider-first",
-    image: "/images/hizmetler/muhasebe.png",
+    image: "/images/hizmetler/slider1.jpg",
     lines: [
       ["İzmir’de Güvenilir", "İzmir’de Güvenilir"],
       ["Mali Müşavirlik ve", "Mali Müşavirlik ve"],
@@ -114,13 +114,13 @@ export default function HomeHeroSlider() {
                     alt=""
                     width={4000}
                     height={3000}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover slider-image"
                     src={s.image}
                     fetchPriority="high"
                   />
                 </div>
                 <div className="container">
-                  <div className="text-content flex-columns-between">
+                  <div className="text-content flex-columns-between pl-10">
                     <div className="heading2">
                       {s.lines.map((pair, i) => (
                         <div key={pair[0]} className="relative overflow-hidden">
@@ -130,14 +130,14 @@ export default function HomeHeroSlider() {
                             {pair[0]}
                           </span>
                           <span
-                            className={`block absolute top-0 left-0 w-full h-full${i === s.highlightLine ? " text-blue" : ""}`}
+                            className={`block absolute top-0 left-0 w-full h-full text-white ${i === s.highlightLine ? " text-blue" : ""}`}
                           >
                             {pair[1]}
                           </span>
                         </div>
                       ))}
                     </div>
-                    <div className="body2 mt-3 text-secondary">{s.description}</div>
+                    <div className="body2 mt-3 text-secondary text-white">{s.description}</div>
                     <div className="button-block md:mt-10 mt-6">
                       <Link className="button-main bg-blue text-white" href={s.ctaHref}>
                         {s.ctaLabel}
