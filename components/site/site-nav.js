@@ -1,69 +1,49 @@
-/** Statik HTML menüsüyle aynı URL yapısı */
+/** Ana menü — Türkçe etiketler, mevcut rota yapısı korunur. */
 export const SITE_NAV = [
   {
     key: "home",
-    label: "Home",
-    children: [
-      { label: "Payment Solution", href: "/", active: true },
-      { label: "Financial Planning", href: "/homepages/home2" },
-      { label: "Online Banking", href: "/homepages/home3" },
-      { label: "Personal Finance", href: "/homepages/home4" },
-      { label: "Cryptocurrency Financial", href: "/homepages/home5" },
-      { label: "Blockchain", href: "/homepages/home6" },
-    ],
+    label: "Ana Sayfa",
+    children: [{ label: "Ana Sayfa", href: "/", active: true }],
   },
   {
     key: "about",
-    label: "About",
+    label: "Kurumsal",
     children: [
-      { label: "About Style 1", href: "/about/about-one" },
-      { label: "About Style 2", href: "/about/about-two" },
+      { label: "Hakkımızda", href: "/about/about-one" },
+      { label: "Vizyon ve Misyon", href: "/about/about-two" },
     ],
   },
   {
     key: "services",
-    label: "Services",
+    label: "Hizmetlerimiz",
     children: [
-      { label: "Service Style 1", href: "/service/service-one" },
-      { label: "Service Style 2", href: "/service/service-two" },
-      { label: "Services Detail", href: "/service/service-detail" },
-    ],
-  },
-  {
-    key: "case",
-    label: "Case Studies",
-    children: [
-      { label: "Case Studies 1", href: "/case-studies/case-studies-one" },
-      { label: "Case Studies 2", href: "/case-studies/case-studies-two" },
-      { label: "Case Studies Detail", href: "/case-studies/detail" },
-    ],
-  },
-  {
-    key: "pages",
-    label: "Pages",
-    children: [
-      { label: "FAQs", href: "/pages/faqs" },
-      { label: "Pricing", href: "/pages/pricing" },
-      { label: "Partners", href: "/pages/partners" },
+      { label: "Hizmet Özeti", href: "/service/service-one" },
+      { label: "Hizmet Alanları", href: "/service/service-two" },
+      { label: "Hizmet Detayları", href: "/service/service-detail" },
     ],
   },
   {
     key: "blog",
-    label: "Blog",
+    label: "Güncel",
     children: [
-      { label: "Blog List 1", href: "/blog/blog-list-one" },
-      { label: "Blog List 2", href: "/blog/blog-list-two" },
-      { label: "Blog Grid", href: "/blog/blog-grid" },
-      { label: "Blog Detail 1", href: "/blog/blog-detail-one" },
-      { label: "Blog Detail 2", href: "/blog/blog-detail-two" },
+      { label: "Makaleler", href: "/blog/blog-list-one" },
+      { label: "Yazı Arşivi", href: "/blog/blog-grid" },
+    ],
+  },
+  {
+    key: "pages",
+    label: "Bilgi Bankası",
+    children: [
+      { label: "Sık Sorulan Sorular", href: "/pages/faqs" },
+      { label: "Fiyatlandırma", href: "/pages/pricing" },
     ],
   },
   {
     key: "contact",
-    label: "Contact",
+    label: "İletişim",
     children: [
-      { label: "Contact Style 1", href: "/contact-one" },
-      { label: "Contact Style 2", href: "/contact-two" },
+      { label: "İletişim", href: "/contact/contact-one" },
+      { label: "İletişim (Alternatif)", href: "/contact/contact-two" },
     ],
   },
 ];

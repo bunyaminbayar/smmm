@@ -4,90 +4,90 @@ import HomeFaq from "./HomeFaq";
 
 const SERVICES = [
   {
-    href: "/service/service-detail/cryptocurrency-trading",
+    href: "/service/service-detail/muhasebe-ve-finansal-raporlama",
     icon: "icon-coin-chair",
     num: "1",
-    title: "Cryptocurrency Trading",
-    desc: "Experience the excitement and potential of the cryptocurrency market with our expert trading services.",
+    title: "Muhasebe ve finansal raporlama",
+    desc: "İzmir’deki işletmeniz için defter tutma, aylık/yıllık kapanışlar ve yönetim raporları ile şeffaf mali tablo.",
   },
   {
-    href: "/service/service-detail/portfolio-management",
+    href: "/service/service-detail/vergi-danismanligi-ve-beyanname",
     icon: "icon-hand-tick",
     num: "2",
-    title: "Portfolio Management",
-    desc: "We analyze market trends, manage risks, and optimize your portfolio to maximize returns and achieve your financial goals.",
+    title: "Vergi danışmanlığı ve beyanname",
+    desc: "KDV, muhtasar, kurumlar/ gelir vergisi uyumu ve süreli beyan süreçlerinde yanınızdayız.",
   },
   {
-    href: "/service/service-detail/investment-advice",
+    href: "/service/service-detail/sgk-ve-is-hukuku-destegi",
     icon: "icon-hand-house",
     num: "3",
-    title: "Investment Advice",
-    desc: "Our team of experienced advisors will guide you in making informed investment, whether you're a beginner trader.",
+    title: "SGK ve iş hukuku desteği",
+    desc: "Prim bildirimleri, teşvikler ve işçi/işveren yükümlülüklerinde güncel mevzuata uyum.",
   },
   {
-    href: "/service/service-detail/risk-management",
+    href: "/service/service-detail/sirket-kurulusu-ve-tasfiye",
     icon: "icon-gear-warning",
     num: "4",
-    title: "Risk Management",
-    desc: "We employ industry-leading tools and techniques to protect your investments and minimize potential losses.",
+    title: "Şirket kuruluşu ve tür değişikliği",
+    desc: "Şahıs, limited ve anonim şirket kuruluşu; devir, birleşme ve bölünme süreçlerinde rehberlik.",
   },
   {
-    href: "/service/service-detail/research-and-analysis",
+    href: "/service/service-detail/denetim-ve-ic-kontrol",
     icon: "icon-text-search",
     num: "5",
-    title: "Research and Analysis",
-    desc: "We provide timely reports, market updates, and data-driven insights to help you make informed trading decisions.",
+    title: "Denetim ve iç kontrol",
+    desc: "Finansal tablolarınızın güvenilirliği ve risklerin erken tespiti için kontrol odaklı çalışma.",
   },
   {
-    href: "/service/service-detail/education-and-resources",
+    href: "/service/service-detail/egitim-ve-mevzuat-guncellemeleri",
     icon: "icon-education",
     num: "6",
-    title: "Education and Resources",
-    desc: "Expand your knowledge and skills in cryptocurrency trading through our educational resources.",
+    title: "Eğitim ve mevzuat güncellemeleri",
+    desc: "Ekibinize yönelik vergi ve SGK bilgilendirmeleri; değişen düzenlemeleri sade dille aktarıyoruz.",
   },
 ];
 
 const CASES = [
   {
-    img: "/images/component/benefit1.png",
-    title: "Trusted Advisor",
-    desc: "We are committed to providing reliable and high-quality financial advisory in our services.",
+    img: "/images/hizmetler/muhasebe.png",
+    title: "Güvenilir danışmanlık",
+    desc: "İzmir ve çevresinde şeffaf iletişim ve ölçülebilir süreçlerle mali uyum hedefliyoruz.",
   },
   {
-    img: "/images/component/benefit2.png",
-    title: "Team Augmentation",
-    desc: "With an experienced and skilled team, we bring the necessary expertise to enhance work productivity.",
+    img: "/images/hizmetler/isletme.jpg",
+    title: "Yerel odak",
+    desc: "Çiğli ofisimizde yüz yüze görüşme; bölge ekonomisine ve KOBİ gerçeklerine hakim ekip.",
   },
   {
-    img: "/images/component/benefit3.png",
-    title: "Innovation",
-    desc: "We constantly seek advanced solutions to address challenges and deliver the highest value to our customers.",
+    img: "/images/hizmetler/hesaplama.jpg",
+    title: "Güncel mevzuat",
+    desc: "Sık değişen vergi ve SGK düzenlemelerini işletmenize özel yorumlayıp uygulanabilir hale getiriyoruz.",
   },
   {
-    img: "/images/component/benefit4.png",
-    title: "Experience",
-    desc: "With over 21 years of serving industrial customers and over 3000 projects, we have the experience to solve almost.",
+    img: "/images/hizmetler/smmm-takip.jpg",
+    title: "Uzun soluklu iş ortaklığı",
+    desc: "Tek seferlik işlem değil, yıl boyu planlama ve dönemsel kontrollerle yanınızdayız.",
   },
 ];
 
 const BLOG_ITEMS = [
   {
     href: "/blog/blog-detail-one/investment-opportunities-explore-options",
-    img: "/images/blog/item1.png",
-    tag: "featured",
-    title: "Investment Opportunities Explore Options",
+    img: "/images/hizmetler/hesaplama.jpg",
+    tag: "vergi",
+    title: "İzmir’de KOBİ’ler için vergi avantajlarına genel bakış",
   },
   {
     href: "/blog/blog-detail-one/credit-card-management-use-wisely",
-    img: "/images/blog/item2.png",
-    tag: "experience",
-    title: "Credit Card Management Use Wisely",
+    img: "/images/hizmetler/isletme.jpg",
+    tag: "sgk",
+    title: "SGK prim bildirimlerinde sık yapılan hatalar",
   },
   {
     href: "/blog/blog-detail-one/savings-strategies-strong-foundation",
-    img: "/images/blog/item3.png",
-    tag: "interview",
-    title: "Savings Strategies Strong Foundation",
+    img: "/images/hizmetler/destek.jpg",
+    tag: "muhasebe",
+    title: "E-fatura ve e-defter süreçlerinde dikkat edilecek noktalar",
   },
 ];
 
@@ -104,7 +104,11 @@ export default function HomeSections() {
     <>
       <section className="service-block lg:mt-[100px] sm:mt-16 mt-10">
         <div className="container">
-          <h3 className="heading3 text-center">Our Services</h3>
+          <h3 className="heading3 text-center">Hizmetlerimiz</h3>
+          <p className="body3 text-secondary text-center max-w-3xl mx-auto md:mt-4 mt-3">
+            İzmir’de faaliyet gösteren işletmeler için muhasebe, vergi ve SGK alanlarında başlıca
+            desteklerimiz. Detaylı bilgi için her başlığa tıklayabilirsiniz.
+          </p>
           <div className="list-service grid lg:grid-cols-3 sm:grid-cols-2 gap-8 md:mt-10 mt-6 gap-y-10">
             {SERVICES.map((s) => (
               <div
@@ -134,7 +138,7 @@ export default function HomeSections() {
             height={5000}
             className="w-full h-full object-cover"
             style={{ color: "transparent" }}
-            src="/images/image_9.png"
+            src="/images/hizmetler/smmm-takip.jpg"
           />
         </div>
         <div className="container w-full lg:py-[150px] pt-14 py-16">
@@ -150,8 +154,7 @@ export default function HomeSections() {
                       height={300}
                       className="full h-full rounded-full"
                       style={{ color: "transparent" }}
-                      srcSet="/images/image_29.png 1x, /images/image.png 2x"
-                      src="/images/image.png"
+                      src="/images/hizmetler/muhasebe.png"
                     />
                   </div>
                   <div className="img sm:w-12 w-10 sm:h-12 h-10 rounded-full overflow-hidden bg-line p-0.5 z-[2] -ml-3">
@@ -162,8 +165,7 @@ export default function HomeSections() {
                       height={300}
                       className="full h-full rounded-full"
                       style={{ color: "transparent" }}
-                      srcSet="/images/image_27.png 1x, /images/image_1.png 2x"
-                      src="/images/image_1.png"
+                      src="/images/hizmetler/hesaplama.jpg"
                     />
                   </div>
                   <div className="img sm:w-12 w-10 sm:h-12 h-10 rounded-full overflow-hidden bg-line p-0.5 z-[1] -ml-3">
@@ -174,8 +176,7 @@ export default function HomeSections() {
                       height={300}
                       className="full h-full rounded-full"
                       style={{ color: "transparent" }}
-                      srcSet="/images/image_28.png 1x, /images/image_2.png 2x"
-                      src="/images/image_2.png"
+                      src="/images/hizmetler/isletme.jpg"
                     />
                   </div>
                   <div className="img sm:w-12 w-10 sm:h-12 h-10 rounded-full overflow-hidden bg-line p-0.5 z-[0] -ml-3">
@@ -185,17 +186,16 @@ export default function HomeSections() {
                   </div>
                 </div>
                 <div className="text-button text-secondary">
-                  Trusted by 50M+ People
+                  İzmir ve çevresinde
                   <br />
-                  around the globe
+                  yerel işletmelere odaklı hizmet
                 </div>
               </div>
               <div className="text lg:mt-14 mt-5">
-                <h3 className="heading3">Payment Gateway Services</h3>
+                <h3 className="heading3">Çiğli’de yüz yüze, İzmir genelinde danışmanlık</h3>
                 <div className="body3 text-secondary lg:mt-6 mt-4">
-                  We provide reliable and secure payment gateway services for businesses of all sizes. With our
-                  cutting-edge technology and 24/7 customer support, you can easily accept payments from customers all
-                  over the world.
+                  Ofisimiz İzmir Çiğli’de; randevu ile bire bir görüşebilir, muhasebe ve vergi süreçlerinizi birlikte
+                  planlayabilirsiniz. Uzaktan dosya paylaşımı ve düzenli raporlama ile de yanınızdayız.
                 </div>
               </div>
               <div className="button-block flex items-center max-sm:flex-wrap sm:gap-6 gap-3 lg:mt-12 mt-8 w-fit">
@@ -235,7 +235,7 @@ export default function HomeSections() {
                     height={4000}
                     className="absolute -right-12 w-[100px] h-auto top-1/2 -translate-y-1/2 max-lg:hidden"
                     style={{ color: "transparent" }}
-                    src="/images/image_6.png"
+                    src="/images/hizmetler/destek.jpg"
                   />
                 </div>
               </div>
@@ -247,11 +247,13 @@ export default function HomeSections() {
       <section className="case-study-block style-one lg:pt-[100px] sm:pt-16 pt-10">
         <div className="container">
           <div className="heading text-center">
-            <h3 className="heading3">Case Studies</h3>
+            <h3 className="heading3">Neden İzmir’de bizi tercih etmelisiniz?</h3>
             <div className="right flex flex-col items-center gap-2 mt-3">
-              <div className="body3">Exploring In-Depth and Inspiring Case Studies of Success Stories</div>
+              <div className="body3 max-w-2xl">
+                Büyük şehir merkezli genel çözümler yerine, bölgenizin iş ölçeğine uygun mali müşavirlik yaklaşımı.
+              </div>
               <Link className="flex items-center gap-2 hover:text-blue duration-300" href="/case-studies/case-studies-one">
-                <div className="text-button">View Our Case Studies</div>
+                <div className="text-button">Örnek çalışmalarımız</div>
                 <ArrowRight />
               </Link>
             </div>
@@ -281,7 +283,7 @@ export default function HomeSections() {
                     </div>
                     <div className="body2 text-white">{c.desc}</div>
                     <Link className="flex items-center gap-1" href="/case-studies/case-studies-one">
-                      <div className="text-button text-white">Read More </div>
+                      <div className="text-button text-white">Devamını oku </div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1em"
@@ -305,17 +307,16 @@ export default function HomeSections() {
         <div className="container">
           <div className="content flex items-center gap-8 max-xl:flex-col">
             <div className="w-full xl:w-5/12 flex flex-col gap-y-6">
-              <h3 className="heading3">Payment Gateway Services</h3>
+              <h3 className="heading3">İşletmenizin mali disiplini</h3>
               <div className="body2 text-secondary">
-                We provide reliable and secure payment gateway services for businesses of all sizes. With our
-                cutting-edge technology and 24/7 customer support, you can easily accept payments from customers all
-                over the world.
+                Nakit akışı, vergi riskleri ve SGK yükümlülükleri tek çatı altında ele alınır; İzmir’deki işinize göre
+                öncelikleri birlikte belirleriz.
               </div>
               <div className="list-service">
                 {[
-                  "Debt evaluation and ability to repay",
-                  "Calculation of credit limit",
-                  "Consolidation of personal financial data",
+                  "Aylık mali tablo ve vergi öncesi kontrol listeleri",
+                  "Yasal defter ve belge düzeni denetimi",
+                  "Yıl sonu kapanış ve beyanname hazırlığı koordinasyonu",
                 ].map((t, i) => (
                   <div key={t} className={`service-item flex items-center${i > 0 ? " mt-3" : ""}`}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" className="text-blue text-2xl flex-shrink-0">
@@ -341,14 +342,14 @@ export default function HomeSections() {
                     height={5000}
                     className="w-full"
                     style={{ color: "transparent" }}
-                    src="/images/image_22.png"
+                    src="/images/hizmetler/destek.jpg"
                   />
                 </div>
                 <div className="feature-item py-4 px-6 rounded-2xl bg-white inline-flex items-center gap-4 box-shadow">
                   <i className="icon-list text-2xl bg-orange p-4 rounded-2xl"> </i>
                   <div className="text">
-                    <div className="heading7">2K+</div>
-                    <div className="heading7 text-secondary">Projects</div>
+                    <div className="heading7">İzmir</div>
+                    <div className="heading7 text-secondary">Yerel hizmet</div>
                   </div>
                 </div>
                 <div className="feature-item py-4 px-6 rounded-2xl bg-white inline-flex items-center gap-4 box-shadow">
@@ -356,15 +357,15 @@ export default function HomeSections() {
                     <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z" />
                   </svg>
                   <div className="text">
-                    <div className="heading7">4.8</div>
-                    <div className="heading7 text-secondary">Satisfaction</div>
+                    <div className="heading7">SMMM</div>
+                    <div className="heading7 text-secondary">Mesleki standart</div>
                   </div>
                 </div>
                 <div className="feature-item py-4 px-6 rounded-2xl bg-white inline-flex items-center gap-4 box-shadow">
                   <i className="icon-user text-2xl bg-orange py-4 px-5 rounded-2xl"> </i>
                   <div className="text">
-                    <div className="heading7">5 Years</div>
-                    <div className="heading7 text-secondary">Product Designer</div>
+                    <div className="heading7">Çiğli</div>
+                    <div className="heading7 text-secondary">Ofis randevusu</div>
                   </div>
                 </div>
               </div>
@@ -405,9 +406,11 @@ export default function HomeSections() {
               </div>
               <div className="w-full select-arrow-none relative">
                 <select className="body3 md:py-[14px] py-3 px-5 bg-surface rounded-lg w-full" name="category">
-                  <option value="Financial Planning">Financial Planning</option>
-                  <option value="Business Planning">Business Planning</option>
-                  <option value="Development Planning">Development Planning</option>
+                  <option value="Muhasebe / defter">Muhasebe / defter</option>
+                  <option value="Vergi ve beyanname">Vergi ve beyanname</option>
+                  <option value="SGK / işçi işveren">SGK / işçi işveren</option>
+                  <option value="Şirket kuruluşu">Şirket kuruluşu</option>
+                  <option value="Diğer">Diğer</option>
                 </select>
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" className="absolute top-1/2 -translate-y-1/2 right-5 pointer-events-none">
                   <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z" />
@@ -423,7 +426,10 @@ export default function HomeSections() {
 
       <section className="list-blog three-col lg:mt-[100px] sm:mt-16 mt-10">
         <div className="container">
-          <h3 className="heading3 text-center">Latest News</h3>
+          <h3 className="heading3 text-center">Güncel yazılar</h3>
+          <p className="body3 text-secondary text-center max-w-2xl mx-auto md:mt-4 mt-3">
+            Vergi ve SGK gündeminden seçilmiş konular — yakında yeni içeriklerle güncellenecek.
+          </p>
           <div className="list grid lg:grid-cols-3 sm:grid-cols-2 gap-8 md:mt-10 mt-6">
             {BLOG_ITEMS.map((b) => (
               <div key={b.href} className="blog-item">
@@ -447,13 +453,13 @@ export default function HomeSections() {
                     <div className="heading6 mt-2">{b.title}</div>
                     <div className="date flex items-center gap-4 mt-2">
                       <div className="author caption2 text-secondary">
-                        by <span className="text-on-surface">Avitex </span>
+                        <span className="text-on-surface">{siteConfig.shortName} </span>
                       </div>
                       <div className="item-date flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
                           <path d="M208,28H188V24a12,12,0,0,0-24,0v4H92V24a12,12,0,0,0-24,0v4H48A20,20,0,0,0,28,48V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V48A20,20,0,0,0,208,28ZM68,52a12,12,0,0,0,24,0h72a12,12,0,0,0,24,0h16V76H52V52ZM52,204V100H204V204Z" />
                         </svg>
-                        <span className="ml-1 caption2">2 days ago</span>
+                        <span className="ml-1 caption2">Yakında</span>
                       </div>
                     </div>
                   </div>

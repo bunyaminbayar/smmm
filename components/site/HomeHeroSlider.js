@@ -11,57 +11,60 @@ import "swiper/css/pagination";
 const slides = [
   {
     variant: "slider-first",
-    image: "/images/image_21.png",
+    image: "/images/hizmetler/muhasebe.png",
     lines: [
-      ["Simplify and Secure", "Simplify and Secure"],
-      ["Your Payments with", "Your Payments with"],
-      ["Our Solution", "Our Solution"],
+      ["İzmir’de Güvenilir", "İzmir’de Güvenilir"],
+      ["Mali Müşavirlik ve", "Mali Müşavirlik ve"],
+      ["Muhasebe Çözümleri", "Muhasebe Çözümleri"],
     ],
     highlightLine: 2,
     description: (
       <>
-        Our platform offers secure and reliable investment
+        Çiğli’deki ofisimizden İzmir ve çevresindeki işletmelere vergi uyumu,
         <br />
-        opportunities in the rapidly growing world of cryptocurrency.
+        muhasebe kayıtları ve danışmanlık sunuyoruz; yüz yüze görüşmeye önem veriyoruz.
       </>
     ),
     ctaHref: "/service/service-one",
+    ctaLabel: "Hizmetlerimiz",
   },
   {
     variant: "slider-second",
-    image: "/images/image_8.png",
+    image: "/images/hizmetler/hesaplama.jpg",
     lines: [
-      ["Empower Your", "Empower Your"],
-      ["Business with", "Business with"],
-      ["Seamless Payments", "Seamless Payments"],
+      ["Vergi, SGK ve", "Vergi, SGK ve"],
+      ["Mevzuatta", "Mevzuatta"],
+      ["Yanınızdayız", "Yanınızdayız"],
     ],
     highlightLine: 2,
     description: (
       <>
-        Our platform offers secure and reliable investment
+        Değişen mevzuata uyum, beyanname süreçleri ve işletmenizin mali disiplini
         <br />
-        opportunities in the rapidly growing world of cryptocurrency.
+        için bölgenizde erişilebilir bir SMMM desteği sağlıyoruz.
       </>
     ),
-    ctaHref: "/service/service-one",
+    ctaHref: "/contact/contact-one",
+    ctaLabel: "Bize Ulaşın",
   },
   {
     variant: "slider-third",
-    image: "/images/image_23.png",
+    image: "/images/hizmetler/isletme.jpg",
     lines: [
-      ["Powerful Payment", "Powerful Payment"],
-      ["Solutions for", "Solutions for"],
-      ["Seamless Transactions", "Seamless Transactions"],
+      ["Yerel İşletmelere", "Yerel İşletmelere"],
+      ["Özel Çözümler", "Özel Çözümler"],
+      ["İzmir Odaklı", "İzmir Odaklı"],
     ],
     highlightLine: 2,
     description: (
       <>
-        Trust us to help you navigate the complex landscape and
+        İstanbul merkezli büyük ölçekli firmalar yerine,
         <br />
-        achieve your financial goals with peace of mind.
+        İzmir’de faaliyet gösteren KOBİ ve serbest meslek sahiplerine odaklanıyoruz.
       </>
     ),
-    ctaHref: "/service/service-one",
+    ctaHref: "/about/about-one",
+    ctaLabel: "Hakkımızda",
   },
 ];
 
@@ -137,7 +140,7 @@ export default function HomeHeroSlider() {
                     <div className="body2 mt-3 text-secondary">{s.description}</div>
                     <div className="button-block md:mt-10 mt-6">
                       <Link className="button-main bg-blue text-white" href={s.ctaHref}>
-                        Discovery now
+                        {s.ctaLabel}
                       </Link>
                     </div>
                   </div>

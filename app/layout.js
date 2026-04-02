@@ -1,5 +1,8 @@
 import "./globals.css";
+import JsonLd from "@/components/site/JsonLd";
 import { siteConfig } from "@/lib/site-config";
+
+const ogImage = "/images/smm-nurettin-bayar-yatay-logo.png";
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -8,14 +11,45 @@ export const metadata = {
     template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.intro,
-  alternates: {
-    canonical: "/",
+  keywords: [
+    "SMMM",
+    "mali müşavir",
+    "muhasebe",
+    "İzmir",
+    "Çiğli",
+    "vergi danışmanlığı",
+    "serbest muhasebeci",
+    "Nurettin Bayar",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
   openGraph: {
     type: "website",
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "tr_TR",
+    title: `${siteConfig.name} | ${siteConfig.tagline}`,
+    description: siteConfig.intro,
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} | ${siteConfig.tagline}`,
+    description: siteConfig.intro,
+    images: [ogImage],
   },
   icons: {
     icon: [
@@ -58,7 +92,10 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/css/6a06c721d3d9652c.css" />
         <link rel="stylesheet" href="/css/73c00cd95dc66651.css" />
       </head>
-      <body className="__className_aaf875">{children}</body>
+      <body className="__className_aaf875">
+        <JsonLd />
+        {children}
+      </body>
     </html>
   );
 }

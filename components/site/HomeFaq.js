@@ -4,24 +4,24 @@ import { useState } from "react";
 
 const FAQ_ITEMS = [
   {
-    q: "Can I return items if I'm not satisfied?",
-    a: "Yes, you can return items within [specify time frame] if you are not satisfied. Please review our return policy for further instructions.",
+    q: "Sadece İzmir’deki müşterilerle mi çalışıyorsunuz?",
+    a: "Ofisimiz İzmir Çiğli’de; önceliğimiz İzmir ve yakın çevredeki işletmeler. Uzaktan dosya ve e-posta ile de süreç yürütebiliriz; detaylar için iletişime geçmeniz yeterli.",
   },
   {
-    q: "What is your warranty policy?",
-    a: "We offer a [specify duration] warranty on our products. Please see our warranty policy for specific details and coverage.",
+    q: "Muhasebe defterimi tutmak zorunda mıyım?",
+    a: "İşletme türünüze ve mevzuata göre ticari defter veya işletme hesabı tutma yükümlülüğünüz olabilir. İlk görüşmede durumunuzu değerlendirip size uygun defter türünü ve süreçleri netleştiririz.",
   },
   {
-    q: "What are your shipping and delivery policies?",
-    a: "Our shipping and delivery policies vary depending on the location and shipping method chosen. Please refer to our shipping page for detailed information.",
+    q: "Vergi beyannamelerini kim hazırlıyor?",
+    a: "Beyannamelerin usule uygun hazırlanması ve zamanında verilmesi için sizden gerekli evrakı toplar, kontrolleri yapar ve onayınıza sunarız. Elektronik ortamda verilmesi gereken beyannamelerde süreçleri birlikte yönetiriz.",
   },
   {
-    q: "What payment methods do you accept?",
-    a: "We accept various payment methods, including [list accepted payment methods]. You can choose the most convenient option during the checkout process.",
+    q: "SGK prim bildirimlerinde destek veriyor musunuz?",
+    a: "Evet. Aylık prim hizmet belgesi, bildirim süreleri ve teşviklerden yararlanma konularında bilgilendirme ve kontrol desteği sağlıyoruz.",
   },
   {
-    q: "Do you have a customer loyalty program?",
-    a: "Yes, we have a customer loyalty program. Earn points with each purchase and enjoy exclusive benefits. Join now to start earning rewards!",
+    q: "Randevu ile mi gelmem gerekiyor?",
+    a: "Yoğunluğa göre randevu öneriyoruz; böylece dosyanız için yeterli süre ayırırız. Telefon veya e-posta ile uygun gün/saat belirleyebilirsiniz.",
   },
 ];
 
@@ -56,21 +56,22 @@ export default function HomeFaq() {
               height={5000}
               className="w-full"
               style={{ color: "transparent" }}
-              src="/images/component/item1.png"
+              src="/images/hizmetler/smmm-takip.jpg"
             />
           </div>
           <div className="desc bg-blue flex items-center justify-center">
             <div className="content flex gap-8">
               <i className="icon-hand-team text-white flex-shrink-0" />
               <h4 className="heading4 text-white">
-                We aim for a world of convenience and value for many customers
+                Sorularınız için Çiğli’de çayımız demli; İzmir’deki işletmenize net ve uygulanabilir cevaplar
+                vermeyi hedefliyoruz.
               </h4>
             </div>
           </div>
         </div>
         <div className="w-full xl:w-1/2 bg-surface">
           <div className="content-main">
-            <div className="heading3">Frequently Asked questions</div>
+            <div className="heading3">Sık sorulan sorular</div>
             <div className="list-question">
               {FAQ_ITEMS.map((item, i) => {
                 const open = openIndex === i;
