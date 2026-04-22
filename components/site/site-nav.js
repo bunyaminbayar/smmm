@@ -22,14 +22,9 @@ export const SITE_NAV = [
     href: "/about/about-one",
   },
   {
-    key: "vision",
-    label: "Vizyon & Misyonumuz",
-    href: "/about/about-two",
-  },
-  {
     key: "blog",
     label: "Blog",
-    href: "/blog/blog-list-one",
+    href: "/blog",
   },
   {
     key: "contact",

@@ -24,7 +24,7 @@ export default function sitemap() {
   }
 
   for (const slug of BLOG_DETAIL_SLUGS) {
-    const path = `/blog/blog-detail-one/${slug}`;
+    const path = `/blog/${slug}`;
     entries.push({
       url: `${base}${path}`,
       lastModified,

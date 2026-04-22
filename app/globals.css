@@ -48,3 +48,13 @@ body {
 .whatsapp-float-pulse {
   animation: whatsapp-float-pulse 2s ease-in-out infinite;
 }
+
+.fullContainer {
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.p-5, .p-6 {
+  padding: 20px;
+}

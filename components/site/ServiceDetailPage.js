@@ -9,8 +9,19 @@ export default function ServiceDetailPage({
   extraBullets = [],
 }) {
   return (
-    <main className="content">
-      <div className="container py-24 md:py-32">
+    <main className="content fullContainer">
+      <div className="py-24 md:py-32">
+              <div className="overflow-hidden rounded-2xl bg-surface mb-4">
+                <img
+                  alt=""
+                  loading="lazy"
+                  width={5000}
+                  height={5000}
+                  className="w-full h-[320px] sm:h-[380px] lg:h-[520px] object-cover"
+                  style={{ color: "transparent" }}
+                  src={imageSrc}
+                />
+              </div>
         <div className="grid gap-10 lg:grid-cols-12 items-start">
           <div className="lg:col-span-7">
             <h1 className="heading2">{title}</h1>
@@ -64,18 +75,8 @@ export default function ServiceDetailPage({
 
           <div className="lg:col-span-5">
             <div className="sticky top-24">
-              <div className="overflow-hidden rounded-2xl bg-surface">
-                <img
-                  alt=""
-                  loading="lazy"
-                  width={5000}
-                  height={5000}
-                  className="w-full h-[320px] sm:h-[380px] lg:h-[520px] object-cover"
-                  style={{ color: "transparent" }}
-                  src={imageSrc}
-                />
-              </div>
-              <div className="mt-6 rounded-2xl border border-line bg-white p-6">
+
+              <div className="mt-6 rounded-2xl border border-line bg-white p-4">
                 <div className="heading6">İzmir odaklı çalışma</div>
                 <p className="body3 text-secondary mt-2">
                   Ofisimiz İzmir Çiğli’de. İzmir’deki işletmelerin dönemsel beyan ve bildirim takvimini düzenli takip

@@ -1,0 +1,43 @@
+[
+  {
+    "href": "/blog/investment-opportunities-explore-options",
+    "img": "/images/hizmetler/hesaplama.jpg",
+    "tag": "vergi",
+    "title": "İzmir’de KOBİ’ler için vergi avantajlarına genel bakış",
+    "intro": "KOBİ’ler için sunulan çeşitli vergi teşvikleri, yatırım indirimleri ve uyum yükümlülükleri hakkında pratik bir bakış.",
+    "content": [
+      {
+        "heading": "Hangi teşvikler mevcut?",
+        "body": "Bölgesel ve sektörel teşvikler, yatırım indirimi ve belirli giderlerin gelirden düşülmesi gibi imkânlar vardır. Öncelikle işletmenizin faaliyet konusu ve yatırımın niteliği değerlendirilmelidir."
+      },
+      {
+        "heading": "Uygulamada dikkat edilecekler",
+        "body": "Teşviklerden yararlanmak için belge düzeni, yatırımın fiziki takibi ve doğru muhasebe kaydı şarttır. Eksik belge ve yanlış sınıflandırma teşvik iptaline yol açabilir."
+      },
+      {
+        "heading": "Nasıl başlanır?",
+        "body": "Ön analizle hangi teşviklere uygun olduğunuz belirlenir; ardından vergi uyum süreçleri düzenlenip başvurular yapılır. Biz bu süreci planlıyor ve takip ediyoruz."
+      }
+    ]
+  },
+  {
+    "href": "/blog/savings-strategies-strong-foundation",
+    "img": "/images/hizmetler/destek.jpg",
+    "tag": "muhasebe",
+    "title": "E-fatura ve e-defter süreçlerinde dikkat edilecek noktalar",
+    "intro": "Elektronik defter ve e-fatura uygulamaları, doğru entegrasyon ve belge akışı gerektirir. Süreçlerin düzenlenmesi, arşivleme ve uyum kontrolleri önemlidir.",
+    "aliases": [
+      "/blog/e-fatura-ve-e-defter-sureclerinde-dikkat-edilecek-noktalar"
+    ],
+    "content": [
+      {
+        "heading": "Sistem entegrasyonu ve formatlar",
+        "body": "Muhasebe programınız ile e-fatura sağlayıcınız arasında doğru veri akışı kurulmalı, XML formatları ve tarih/saat uyumu kontrol edilmelidir."
+      },
+      {
+        "heading": "Düzenli kontrol ve yedekleme",
+        "body": "Elektronik belgelerin düzenli kontrolü, yetkilendirme ve güvenli yedekleme politikası işletilmelidir; aksi takdirde kanuni uyumsuzluk riski doğar."
+      }
+    ]
+  }
+]

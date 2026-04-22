@@ -14,19 +14,13 @@ const SERVICES = SERVICES_DATA.map((s, idx) => ({
 
 const BLOG_ITEMS = [
   {
-    href: "/blog/blog-detail-one/investment-opportunities-explore-options",
+    href: "/blog/investment-opportunities-explore-options",
     img: "/images/hizmetler/hesaplama.jpg",
     tag: "vergi",
-    title: "İzmir’de KOBİ’ler için  burantajlarına genel bakış",
+    title: "İzmir’de KOBİ’ler için vergi avantajlarına genel bakış",
   },
   {
-    href: "/blog/blog-detail-one/credit-card-management-use-wisely",
-    img: "/images/hizmetler/isletme.jpg",
-    tag: "sgk",
-    title: "SGK prim bildirimlerinde sık yapılan hatalar",
-  },
-  {
-    href: "/blog/blog-detail-one/savings-strategies-strong-foundation",
+    href: "/blog/savings-strategies-strong-foundation",
     img: "/images/hizmetler/destek.jpg",
     tag: "muhasebe",
     title: "E-fatura ve e-defter süreçlerinde dikkat edilecek noktalar",

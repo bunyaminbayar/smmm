@@ -113,7 +113,7 @@ export default function Footer() {
                       <li className="mt-3">
                         <Link
                           className="caption1 has-line-before line-white text-surface hover-underline"
-                          href="/blog/blog-list-one"
+                          href="/blog"
                         >
                           Blog
                         </Link>
@@ -124,14 +124,6 @@ export default function Footer() {
                           href="/about/about-one"
                         >
                           Hakkımızda
-                        </Link>
-                      </li>
-                      <li className="mt-3">
-                        <Link
-                          className="caption1 has-line-before line-white text-surface hover-underline"
-                          href="/about/about-two"
-                        >
-                          Vizyon & Misyon
                         </Link>
                       </li>
                       <li className="mt-3">
