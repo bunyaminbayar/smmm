@@ -17,7 +17,7 @@ const BLOG_ITEMS = [
     href: "/blog/blog-detail-one/investment-opportunities-explore-options",
     img: "/images/hizmetler/hesaplama.jpg",
     tag: "vergi",
-    title: "İzmir’de KOBİ’ler için vergi avantajlarına genel bakış",
+    title: "İzmir’de KOBİ’ler için  burantajlarına genel bakış",
   },
   {
     href: "/blog/blog-detail-one/credit-card-management-use-wisely",
@@ -89,7 +89,7 @@ export default function HomeSections() {
               <div className="button-block flex items-center max-sm:flex-wrap sm:gap-6 gap-3 lg:mt-12 mt-8 w-fit">
                 <Link
                   className="button-main box-shadow hover:bg-black text-white bg-blue whitespace-nowrap rounded-full"
-                  href="/contact-two"
+                  href="/iletisim"
                 >
                   İletişim
                 </Link>
@@ -149,7 +149,7 @@ export default function HomeSections() {
                 ))}
               </div>
               <div className="button-block">
-                <Link className="button-main hover:bg-blue text-white bg-black rounded-full" href="/contact-two">
+                <Link className="button-main hover:bg-blue text-white bg-black rounded-full" href="/iletisim">
                   İletişim
                 </Link>
               </div>

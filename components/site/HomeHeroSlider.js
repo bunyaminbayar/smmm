@@ -25,7 +25,7 @@ const slides = [
         muhasebe kayıtları ve danışmanlık sunuyoruz; yüz yüze görüşmeye önem veriyoruz.
       </>
     ),
-    ctaHref: "/hizmetlerimiz",
+    ctaHref: "/hizmetlerimiz/muhasebe-mali-isler-yonetimi",
     ctaLabel: "Hizmetlerimiz",
   },
   {
@@ -44,7 +44,7 @@ const slides = [
         için bölgenizde erişilebilir bir SMMM desteği sağlıyoruz.
       </>
     ),
-    ctaHref: "/contact/contact-one",
+    ctaHref: "/iletisim",
     ctaLabel: "Bize Ulaşın",
   },
   {
@@ -63,7 +63,7 @@ const slides = [
         İzmir’de faaliyet gösteren KOBİ ve serbest meslek sahiplerine odaklanıyoruz.
       </>
     ),
-    ctaHref: "/about/about-one",
+    ctaHref: "/hizmetlerimiz/muhasebe-mali-isler-yonetimi",
     ctaLabel: "Hakkımızda",
   },
 ];
