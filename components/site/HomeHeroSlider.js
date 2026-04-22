@@ -25,7 +25,7 @@ const slides = [
         muhasebe kayıtları ve danışmanlık sunuyoruz; yüz yüze görüşmeye önem veriyoruz.
       </>
     ),
-    ctaHref: "/service/service-one",
+    ctaHref: "/hizmetlerimiz",
     ctaLabel: "Hizmetlerimiz",
   },
   {

@@ -1,52 +1,16 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
+import { SERVICES as SERVICES_DATA, getServiceHref } from "@/lib/services";
 import HomeFaq from "./HomeFaq";
 import HomeWhyIzmirSection from "./HomeWhyIzmirSection";
 
-const SERVICES = [
-  {
-    href: "/service/service-detail/muhasebe-ve-finansal-raporlama",
-    icon: "icon-coin-chair",
-    num: "1",
-    title: "Muhasebe ve finansal raporlama",
-    desc: "İzmir’deki işletmeniz için defter tutma, aylık/yıllık kapanışlar ve yönetim raporları ile şeffaf mali tablo.",
-  },
-  {
-    href: "/service/service-detail/vergi-danismanligi-ve-beyanname",
-    icon: "icon-hand-tick",
-    num: "2",
-    title: "Vergi danışmanlığı ve beyanname",
-    desc: "KDV, muhtasar, kurumlar/ gelir vergisi uyumu ve süreli beyan süreçlerinde yanınızdayız.",
-  },
-  {
-    href: "/service/service-detail/sgk-ve-is-hukuku-destegi",
-    icon: "icon-hand-house",
-    num: "3",
-    title: "SGK ve iş hukuku desteği",
-    desc: "Prim bildirimleri, teşvikler ve işçi/işveren yükümlülüklerinde güncel mevzuata uyum.",
-  },
-  {
-    href: "/service/service-detail/sirket-kurulusu-ve-tasfiye",
-    icon: "icon-gear-warning",
-    num: "4",
-    title: "Şirket kuruluşu ve tür değişikliği",
-    desc: "Şahıs, limited ve anonim şirket kuruluşu; devir, birleşme ve bölünme süreçlerinde rehberlik.",
-  },
-  {
-    href: "/service/service-detail/denetim-ve-ic-kontrol",
-    icon: "icon-text-search",
-    num: "5",
-    title: "Denetim ve iç kontrol",
-    desc: "Finansal tablolarınızın güvenilirliği ve risklerin erken tespiti için kontrol odaklı çalışma.",
-  },
-  {
-    href: "/service/service-detail/egitim-ve-mevzuat-guncellemeleri",
-    icon: "icon-education",
-    num: "6",
-    title: "Eğitim ve mevzuat güncellemeleri",
-    desc: "Ekibinize yönelik vergi ve SGK bilgilendirmeleri; değişen düzenlemeleri sade dille aktarıyoruz.",
-  },
-];
+const SERVICES = SERVICES_DATA.map((s, idx) => ({
+  href: getServiceHref(s.slug),
+  icon: s.icon,
+  num: String(idx + 1),
+  title: s.title,
+  desc: s.summary,
+}));
 
 const BLOG_ITEMS = [
   {
@@ -190,59 +154,55 @@ export default function HomeSections() {
                 </Link>
               </div>
             </div>
+
+            <div className="w-full xl:w-7/12">
+              <div className="right relative pl-0 xl:pl-10">
+                <div className="bg-img overflow-hidden rounded-2xl">
+                  <img
+                    alt="İzmir Çiğli mali müşavirlik desteği"
+                    loading="lazy"
+                    width={5000}
+                    height={5000}
+                    className="w-full h-[360px] sm:h-[420px] xl:h-[520px] object-cover"
+                    style={{ color: "transparent" }}
+                    src="/images/hizmetler/destek.jpg"
+                  />
+                </div>
+
+                <div className="feature-item py-4 px-6 rounded-2xl bg-white inline-flex items-center gap-4 box-shadow absolute left-6 bottom-6">
+                  <i className="icon-list text-2xl bg-orange p-4 rounded-2xl"> </i>
+                  <div className="text">
+                    <div className="heading7">Aylık</div>
+                    <div className="heading7 text-secondary">Raporlama</div>
+                  </div>
+                </div>
+
+                <div className="feature-item py-4 px-6 rounded-2xl bg-white inline-flex items-center gap-4 box-shadow absolute right-6 top-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" className="text-yellow text-3xl">
+                    <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z" />
+                  </svg>
+                  <div className="text">
+                    <div className="heading7">SMMM</div>
+                    <div className="heading7 text-secondary">Standart</div>
+                  </div>
+                </div>
+
+                <div className="feature-item py-4 px-6 rounded-2xl bg-white inline-flex items-center gap-4 box-shadow absolute right-6 bottom-24 max-sm:hidden">
+                  <i className="icon-user text-2xl bg-orange py-4 px-5 rounded-2xl"> </i>
+                  <div className="text">
+                    <div className="heading7">Çiğli</div>
+                    <div className="heading7 text-secondary">Randevu</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <HomeFaq />
 
-      <div className="form-request-block lg:mt-[100px] sm:mt-16 mt-10">
-        <div className="container">
-          <div className="heading flex max-xl:flex-col xl:items-center gap-4 justify-between">
-            <div className="heading3">Sizi arayalım</div>
-            <div className="body3 text-secondary">
-              İletişim bilgilerinizi bırakın; en kısa sürede size dönüş yapalım.
-            </div>
-          </div>
-          <form className="form md:mt-10 mt-6 flex max-lg:flex-col lg:items-center justify-between gap-8 pb-14 border-b border-line">
-            <div className="grid lg:grid-cols-3 gap-6 w-full">
-              <div className="w-full">
-                <input
-                  className="body3 md:py-[14px] py-3 px-5 bg-surface rounded-lg w-full"
-                  type="text"
-                  placeholder="Ad Soyad*"
-                  required
-                  name="firstName"
-                />
-              </div>
-              <div className="w-full">
-                <input
-                  className="body3 md:py-[14px] py-3 px-5 bg-surface rounded-lg w-full"
-                  type="email"
-                  placeholder="E-posta"
-                  required
-                  name="email"
-                />
-              </div>
-              <div className="w-full select-arrow-none relative">
-                <select className="body3 md:py-[14px] py-3 px-5 bg-surface rounded-lg w-full" name="category">
-                  <option value="Muhasebe / defter">Muhasebe / defter</option>
-                  <option value="Vergi ve beyanname">Vergi ve beyanname</option>
-                  <option value="SGK / işçi işveren">SGK / işçi işveren</option>
-                  <option value="Şirket kuruluşu">Şirket kuruluşu</option>
-                  <option value="Diğer">Diğer</option>
-                </select>
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" className="absolute top-1/2 -translate-y-1/2 right-5 pointer-events-none">
-                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z" />
-                </svg>
-              </div>
-            </div>
-            <button type="submit" className="button-main flex-shrink-0 bg-black hover:bg-blue text-white rounded-full">
-              Gönder
-            </button>
-          </form>
-        </div>
-      </div>
+  
 
       <section className="list-blog three-col lg:mt-[100px] sm:mt-16 mt-10">
         <div className="container">

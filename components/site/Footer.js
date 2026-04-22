@@ -29,69 +29,27 @@ export default function Footer() {
                   >
                     Google Haritalar’da konum
                   </a>
-                  <div className="list-social flex items-center gap-2.5 style-one">
-                    <a
-                      className="item rounded-full w-7 h-7 border-2 border-grey flex items-center justify-center"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.facebook.com/"
-                    >
-                      <i className="icon-facebook text-sm" />
-                    </a>
-                    <a
-                      className="item rounded-full w-7 h-7 border-2 border-grey flex items-center justify-center"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.linkedin.com/"
-                    >
-                      <i className="icon-in text-sm" />
-                    </a>
-                    <a
-                      className="item rounded-full w-7 h-7 border-2 border-grey flex items-center justify-center"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.twitter.com/"
-                    >
-                      <i className="icon-twitter text-xs" />
-                    </a>
-                    <a
-                      className="item rounded-full w-7 h-7 border-2 border-grey flex items-center justify-center"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.instagram.com/"
-                    >
-                      <i className="icon-insta text-xs" />
-                    </a>
-                    <a
-                      className="item rounded-full w-7 h-7 border-2 border-grey flex items-center justify-center"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.youtube.com/"
-                    >
-                      <i className="icon-youtube text-xs" />
-                    </a>
-                  </div>
                 </div>
               </div>
               <div className="lg:w-1/2">
                 <div className="footer-navigate flex items-center justify-center gap-20">
                   <div className="footer-nav-item">
-                    <div className="item-heading text-button-sm text-white">Quick Links</div>
+                    <div className="item-heading text-button-sm text-white">Hızlı bağlantılar</div>
                     <ul className="list-nav mt-1">
                       <li className="mt-3">
                         <Link
                           className="caption1 has-line-before line-white text-surface hover-underline"
                           href="/about/about-one"
                         >
-                          About us
+                          Hakkımızda
                         </Link>
                       </li>
                       <li className="mt-3">
                         <Link
                           className="caption1 has-line-before line-white text-surface hover-underline"
-                          href="/service/service-one"
+                          href="/hizmetlerimiz"
                         >
-                          Services
+                          Hizmetlerimiz
                         </Link>
                       </li>
                       <li className="mt-3">
@@ -99,52 +57,52 @@ export default function Footer() {
                           className="caption1 has-line-before line-white text-surface hover-underline"
                           href="/case-studies/case-studies-one"
                         >
-                          Case Studies
+                          Örnek çalışmalar
                         </Link>
                       </li>
                       <li className="mt-3">
                         <Link
                           className="caption1 has-line-before line-white text-surface hover-underline"
-                          href="/contact-two"
+                          href="/iletisim"
                         >
-                          Contact
+                          İletişim
                         </Link>
                       </li>
                     </ul>
                   </div>
                   <div className="footer-nav-item max-sm:hidden">
-                    <div className="item-heading text-button-sm text-white">Pages</div>
+                    <div className="item-heading text-button-sm text-white">Hizmetler</div>
                     <ul className="list-nav mt-1">
                       <li className="mt-3">
                         <Link
                           className="caption1 has-line-before line-white text-surface hover-underline"
-                          href="/pages/faqs"
+                          href="/hizmetlerimiz/muhasebe-mali-isler-yonetimi"
                         >
-                          FAQs
+                          Muhasebe & mali işler
                         </Link>
                       </li>
                       <li className="mt-3">
                         <Link
                           className="caption1 has-line-before line-white text-surface hover-underline"
-                          href="/pages/pricing"
+                          href="/hizmetlerimiz/vergi-danismanligi-beyanname"
                         >
-                          Pricing
+                          Vergi & beyanname
                         </Link>
                       </li>
                       <li className="mt-3">
                         <Link
                           className="caption1 has-line-before line-white text-surface hover-underline"
-                          href="/pages/partners"
+                          href="/hizmetlerimiz/bordrolama-sgk"
                         >
-                          Partners
+                          Bordrolama & SGK
                         </Link>
                       </li>
                       <li className="mt-3">
                         <Link
                           className="caption1 has-line-before line-white text-surface hover-underline"
-                          href="/contact-two"
+                          href="/hizmetlerimiz/kdv-iade"
                         >
-                          Support Center
+                          KDV iade
                         </Link>
                       </li>
                     </ul>
@@ -157,31 +115,31 @@ export default function Footer() {
                           className="caption1 has-line-before line-white text-surface hover-underline"
                           href="/blog/blog-list-one"
                         >
-                          Blog List 1
+                          Blog
                         </Link>
                       </li>
                       <li className="mt-3">
                         <Link
                           className="caption1 has-line-before line-white text-surface hover-underline"
-                          href="/blog/blog-list-two"
+                          href="/about/about-one"
                         >
-                          Blog List 2
+                          Hakkımızda
                         </Link>
                       </li>
                       <li className="mt-3">
                         <Link
                           className="caption1 has-line-before line-white text-surface hover-underline"
-                          href="/blog/blog-grid"
+                          href="/about/about-two"
                         >
-                          Blog Grid
+                          Vizyon & Misyon
                         </Link>
                       </li>
                       <li className="mt-3">
                         <Link
                           className="caption1 has-line-before line-white text-surface hover-underline"
-                          href="/blog/blog-detail-one"
+                          href="/iletisim"
                         >
-                          Blog Detail
+                          İletişim
                         </Link>
                       </li>
                     </ul>
@@ -224,30 +182,6 @@ export default function Footer() {
                     </svg>
                     <div className="caption1 text-surface ml-2">{siteConfig.address.full}</div>
                   </div>
-                  <form className="send-block mt-5 flex items-center h-[46px] rounded-lg overflow-hidden">
-                    <input
-                      className="caption1 text-secondary h-full w-full pr-4 pl-3"
-                      type="email"
-                      placeholder="E-posta adresiniz"
-                      required
-                    />
-                    <button
-                      type="submit"
-                      className="flex items-center justify-center w-[46px] h-[46px] bg-blue flex-shrink-0"
-                      aria-label="Gönder"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        fill="currentColor"
-                        viewBox="0 0 256 256"
-                        className="text-white"
-                      >
-                        <path d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-.15,0L19.57,82.84a16,16,0,0,0-2.42,29.84l85.62,40.55,40.55,85.62A15.86,15.86,0,0,0,157.74,248q.69,0,1.38-.06a15.88,15.88,0,0,0,14-11.51l58.2-191.94c0-.05,0-.1,0-.15A16,16,0,0,0,227.32,28.68ZM157.83,231.85l-.05.14L118.42,148.9l47.24-47.25a8,8,0,0,0-11.31-11.31L107.1,137.58,24,98.22l.14,0L216,40Z" />
-                      </svg>
-                    </button>
-                  </form>
                 </div>
               </div>
             </div>
@@ -268,19 +202,6 @@ export default function Footer() {
                 <div className="copy-right text-surface caption1">
                   © {year} {siteConfig.name}. Tüm hakları saklıdır.
                 </div>
-              </div>
-              <div className="nav-link flex flex-wrap items-center gap-2.5">
-                <a className="text-surface caption1 hover-underline" href="#!">
-                  Terms Of Services
-                </a>
-                <span className="text-surface caption1">|</span>
-                <a className="text-surface caption1 hover-underline" href="#!">
-                  Privacy Policy
-                </a>
-                <span className="text-surface caption1">|</span>
-                <a className="text-surface caption1 hover-underline" href="#!">
-                  Cookie Policy
-                </a>
               </div>
             </div>
           </div>

@@ -85,7 +85,13 @@ export default function Header() {
               </span>
             </div>
             <div className="mail lg:ml-7 flex items-center">
-              <svg
+             
+            </div>
+          </div>
+          <div className="right-block flex items-center gap-5">
+       
+            <div className="line h-6 w-px bg-grey max-sm:hidden"> </div>
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"
                 height="1em"
@@ -101,53 +107,6 @@ export default function Header() {
               >
                 {siteConfig.email}
               </a>
-            </div>
-          </div>
-          <div className="right-block flex items-center gap-5">
-       
-            <div className="line h-6 w-px bg-grey max-sm:hidden"> </div>
-            <div className="list-social flex items-center gap-2.5 style-one max-sm:hidden">
-              <a
-                className="item rounded-full w-7 h-7 border-grey border-2 flex items-center justify-center"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.facebook.com/"
-              >
-                <i className="icon-facebook text-sm" />
-              </a>
-              <a
-                className="item rounded-full w-7 h-7 border-grey border-2 flex items-center justify-center"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.linkedin.com/"
-              >
-                <i className="icon-in text-xs" />
-              </a>
-              <a
-                className="item rounded-full w-7 h-7 border-grey border-2 flex items-center justify-center"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.twitter.com/"
-              >
-                <i className="icon-twitter text-[10px]" />
-              </a>
-              <a
-                className="item rounded-full w-7 h-7 border-grey border-2 flex items-center justify-center"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.instagram.com/"
-              >
-                <i className="icon-insta text-[10px]" />
-              </a>
-              <a
-                className="item rounded-full w-7 h-7 border-grey border-2 flex items-center justify-center"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.youtube.com/"
-              >
-                <i className="icon-youtube text-[10px]" />
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -170,31 +129,42 @@ export default function Header() {
 
           <div className="menu-center-block h-full max-lg:hidden">
             <ul className="menu-nav flex items-center xl:gap-2 h-full">
-              {SITE_NAV.map((item) => (
+              {SITE_NAV.map((item) => {
+                const hasChildren = Array.isArray(item.children) && item.children.length > 0;
+                return (
                 <li
                   key={item.key}
                   className={`nav-item h-full flex items-center justify-center ${item.key} ${item.key === "home" ? "home active" : ""}`.trim()}
                 >
-                  <span className="nav-link text-title flex items-center gap-1 pointer">
-                    <span>{item.label}</span>
-                    <span>
-                      <ChevronDown />
-                    </span>
-                  </span>
-                  <ul className="sub-nav">
-                    {item.children.map((c) => (
-                      <li
-                        key={c.href}
-                        className={`sub-nav-item ${c.active ? "active" : ""}`.trim()}
-                      >
-                        <Link className="sub-nav-link font-medium" href={c.href}>
-                          {c.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  {hasChildren ? (
+                    <>
+                      <span className="nav-link text-title flex items-center gap-1 pointer">
+                        <span>{item.label}</span>
+                        <span>
+                          <ChevronDown />
+                        </span>
+                      </span>
+                      <ul className="sub-nav">
+                        {item.children.map((c) => (
+                          <li
+                            key={c.href}
+                            className={`sub-nav-item ${c.active ? "active" : ""}`.trim()}
+                          >
+                            <Link className="sub-nav-link font-medium" href={c.href}>
+                              {c.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <Link className="nav-link text-title flex items-center gap-1" href={item.href || "/"}>
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
-              ))}
+              );
+              })}
             </ul>
           </div>
 
@@ -254,40 +224,56 @@ export default function Header() {
             <div className="container">
               <ul className="menu-nav-mobile h-full pt-1 pb-1">
                 {SITE_NAV.map((item, idx) => {
+                  const hasChildren = Array.isArray(item.children) && item.children.length > 0;
                   const sectionOpen = expandedMobileKey === item.key;
                   return (
                     <li
                       key={item.key}
                       className={`nav-item-mobile h-full flex-column gap-2 ${idx === 0 ? "pt-2" : "pt-4"} pb-2 pl-3 pr-3 pointer ${item.key} ${sectionOpen ? "active" : ""}`.trim()}
                     >
-                      <button
-                        type="button"
-                        className="nav-link-mobile flex items-center justify-between w-full bg-transparent border-none text-left cursor-pointer"
-                        onClick={() => toggleMobileSection(item.key)}
-                        aria-expanded={sectionOpen}
-                      >
-                        <span className="body2 font-semibold">{item.label} </span>
-                        <ChevronRight />
-                      </button>
-                      <ul className={`sub-nav-mobile ${sectionOpen ? "open" : ""}`.trim()}>
-                        {item.children.map((c) => (
-                          <li
-                            key={c.href}
-                            className={`sub-nav-item pl-3 pr-3 pt-2 pb-2 ${c.active ? "active" : ""}`.trim()}
+                      {hasChildren ? (
+                        <>
+                          <button
+                            type="button"
+                            className="nav-link-mobile flex items-center justify-between w-full bg-transparent border-none text-left cursor-pointer"
+                            onClick={() => toggleMobileSection(item.key)}
+                            aria-expanded={sectionOpen}
                           >
-                            <Link
-                              className="sub-nav-link text-base"
-                              href={c.href}
-                              onClick={() => {
-                                setMobileOpen(false);
-                                setExpandedMobileKey(null);
-                              }}
-                            >
-                              {c.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
+                            <span className="body2 font-semibold">{item.label} </span>
+                            <ChevronRight />
+                          </button>
+                          <ul className={`sub-nav-mobile ${sectionOpen ? "open" : ""}`.trim()}>
+                            {item.children.map((c) => (
+                              <li
+                                key={c.href}
+                                className={`sub-nav-item pl-3 pr-3 pt-2 pb-2 ${c.active ? "active" : ""}`.trim()}
+                              >
+                                <Link
+                                  className="sub-nav-link text-base"
+                                  href={c.href}
+                                  onClick={() => {
+                                    setMobileOpen(false);
+                                    setExpandedMobileKey(null);
+                                  }}
+                                >
+                                  {c.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      ) : (
+                        <Link
+                          className="nav-link-mobile flex items-center justify-between w-full bg-transparent border-none text-left cursor-pointer"
+                          href={item.href || "/"}
+                          onClick={() => {
+                            setMobileOpen(false);
+                            setExpandedMobileKey(null);
+                          }}
+                        >
+                          <span className="body2 font-semibold">{item.label} </span>
+                        </Link>
+                      )}
                     </li>
                   );
                 })}

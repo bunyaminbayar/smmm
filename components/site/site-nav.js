@@ -3,47 +3,37 @@ export const SITE_NAV = [
   {
     key: "home",
     label: "Ana Sayfa",
-    children: [{ label: "Ana Sayfa", href: "/", active: true }],
-  },
-  {
-    key: "about",
-    label: "Kurumsal",
-    children: [
-      { label: "Hakkımızda", href: "/about/about-one" },
-      { label: "Vizyon ve Misyon", href: "/about/about-two" },
-    ],
+    href: "/",
   },
   {
     key: "services",
-    label: "Hizmetlerimiz",
+    label: "Hizmetler",
     children: [
-      { label: "Hizmet Özeti", href: "/service/service-one" },
-      { label: "Hizmet Alanları", href: "/service/service-two" },
-      { label: "Hizmet Detayları", href: "/service/service-detail" },
+      { label: "Muhasebe ve mali işler", href: "/hizmetlerimiz/muhasebe-mali-isler-yonetimi" },
+      { label: "Vergi ve beyanname", href: "/hizmetlerimiz/vergi-danismanligi-beyanname" },
+      { label: "Bordrolama ve SGK", href: "/hizmetlerimiz/bordrolama-sgk" },
+      { label: "Finansal raporlama", href: "/hizmetlerimiz/finansal-raporlama" },
+      { label: "KDV iade", href: "/hizmetlerimiz/kdv-iade" },
     ],
+  },
+  {
+    key: "about",
+    label: "Hakkımızda",
+    href: "/about/about-one",
+  },
+  {
+    key: "vision",
+    label: "Vizyon & Misyonumuz",
+    href: "/about/about-two",
   },
   {
     key: "blog",
-    label: "Güncel",
-    children: [
-      { label: "Makaleler", href: "/blog/blog-list-one" },
-      { label: "Yazı Arşivi", href: "/blog/blog-grid" },
-    ],
-  },
-  {
-    key: "pages",
-    label: "Bilgi Bankası",
-    children: [
-      { label: "Sık Sorulan Sorular", href: "/pages/faqs" },
-      { label: "Fiyatlandırma", href: "/pages/pricing" },
-    ],
+    label: "Blog",
+    href: "/blog/blog-list-one",
   },
   {
     key: "contact",
     label: "İletişim",
-    children: [
-      { label: "İletişim", href: "/contact/contact-one" },
-      { label: "İletişim (Alternatif)", href: "/contact/contact-two" },
-    ],
+    href: "/iletisim",
   },
 ];

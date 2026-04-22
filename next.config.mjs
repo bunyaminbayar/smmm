@@ -19,16 +19,6 @@ const nextConfig = {
     return [
       ...legacyWordPressRedirectsToHome(),
       {
-        source: "/contact/contact-one",
-        destination: "/contact-one",
-        permanent: false,
-      },
-      {
-        source: "/contact/contact-two",
-        destination: "/contact-two",
-        permanent: false,
-      },
-      {
         source: "/favicon.ico",
         destination: "/images/favicon/favicon.ico",
         permanent: false,

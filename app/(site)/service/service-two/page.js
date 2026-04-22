@@ -1,6 +1,6 @@
-import PlaceholderPage from "@/components/site/PlaceholderPage";
+import { redirect } from "next/navigation";
 
 export default function Page() {
-  return <PlaceholderPage title="Service Style 2" />;
+  redirect("/hizmetlerimiz");
 }
 
