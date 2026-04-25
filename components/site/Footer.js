@@ -105,6 +105,14 @@ export default function Footer() {
                           KDV iade
                         </Link>
                       </li>
+                      <li className="mt-3">
+                        <Link
+                          className="caption1 has-line-before line-white text-surface hover-underline"
+                          href="/hizmetlerimiz/yurt-disi-dijital-vergi-stratejileri"
+                        >
+                          Yurt Dışı Dijital Vergi Stratejileri
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div className="footer-nav-item">

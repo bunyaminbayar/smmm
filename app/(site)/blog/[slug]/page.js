@@ -10,13 +10,23 @@ const ITEMS = BLOG_ITEMS.map((it) => ({
 
 const ITEMS_BY_SLUG = ITEMS.reduce((acc, it) => {
   acc[it.slug] = it;
+  // also index any aliases so old slugs still resolve
+  if (Array.isArray(it.aliases)) {
+    it.aliases.forEach((a) => {
+      const s = a.replace(/^\/blog\//, "").replace(/^\//, "");
+      if (s) acc[s] = it;
+    });
+  }
   return acc;
 }, {});
 
-export default async function Page({ params }) {
+export default async function Page(props) {
+  // In recent Next versions `params` may be a Promise; unwrap it.
+  const params = await props.params;
   const { slug } = params;
   const key = Array.isArray(slug) ? slug[slug.length - 1] : slug;
   const article = ITEMS_BY_SLUG[key];
+  
 
   const SLUG_ORDER = ITEMS.map((i) => i.slug);
   const idx = SLUG_ORDER.indexOf(key);
@@ -43,7 +53,7 @@ export default async function Page({ params }) {
 
   return (
     <main className="content">
-      <div className="container py-12 md:py-20">
+      <div className="py-12 md:py-20 fullContainer">
         <div className="overflow-hidden rounded-2xl bg-surface">
           <img
             alt={article.title}
@@ -117,37 +127,29 @@ export default async function Page({ params }) {
                 <div />
               )}
             </div>
-
-            <div className="mt-10 rounded-2xl border border-line bg-white p-6">
-              <h4 className="heading6">Yorum bırakın</h4>
-              <form className="mt-4 space-y-3">
-                <input className="w-full p-3 border border-line rounded" placeholder="Adınız" />
-                <input className="w-full p-3 border border-line rounded" placeholder="E-posta" />
-                <textarea className="w-full p-3 border border-line rounded" rows={4} placeholder="Yorumunuz" />
-                <button type="button" className="button-main bg-blue text-white rounded-full">Gönder</button>
-              </form>
-            </div>
           </div>
 
           <aside className="lg:col-span-4">
             <div className="sticky top-24 space-y-6">
-              <div className="rounded-2xl border border-line bg-white p-6">
-                <div className="heading6">Yazar</div>
-                <p className="body3 text-secondary mt-2">{siteConfig.shortName}</p>
-                <div className="mt-4">
-                  <a href={`tel:${siteConfig.phoneTel}`} className="caption2 text-blue hover:underline">{siteConfig.phoneDisplay}</a>
-                </div>
-              </div>
+              
 
               <div className="rounded-2xl border border-line bg-white p-6">
                 <div className="heading6">İlgili yazılar</div>
-                <ul className="mt-3 space-y-3">
-                  {ITEMS.map((it) => (
-                    <li key={it.slug}>
-                      <Link href={`/blog/${it.slug}`} className="text-secondary hover:text-blue">{it.title}</Link>
-                    </li>
+                <div className="mt-3 grid gap-3 list-service grid lg:grid-cols-3 sm:grid-cols-2 gap-8 md:mt-10 mt-6 gap-y-10">
+                  {ITEMS.filter((it) => it.slug !== key).map((it) => (
+                    <Link
+                      key={it.slug}
+                      href={`/blog/${it.slug}`}
+                      className="flex items-center gap-3 hover:bg-surface rounded p-2"
+                    >
+                      <img src={it.img} alt={it.title} className="w-16 h-12 object-cover rounded" />
+                      <div className="flex-1">
+                        <div className="caption2 py-1 px-3 bg-surface rounded-full inline-block capitalize">{it.tag}</div>
+                        <div className="heading7 mt-1 text-sm">{it.title}</div>
+                      </div>
+                    </Link>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
           </aside>

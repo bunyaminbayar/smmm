@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { SERVICES as SERVICES_DATA, getServiceHref } from "@/lib/services";
+import BLOG_ITEMS from "@/app/(site)/blog/blog-items.json";
 import HomeFaq from "./HomeFaq";
 import HomeWhyIzmirSection from "./HomeWhyIzmirSection";
 
@@ -12,20 +13,7 @@ const SERVICES = SERVICES_DATA.map((s, idx) => ({
   desc: s.summary,
 }));
 
-const BLOG_ITEMS = [
-  {
-    href: "/blog/investment-opportunities-explore-options",
-    img: "/images/hizmetler/hesaplama.jpg",
-    tag: "vergi",
-    title: "İzmir’de KOBİ’ler için vergi avantajlarına genel bakış",
-  },
-  {
-    href: "/blog/savings-strategies-strong-foundation",
-    img: "/images/hizmetler/destek.jpg",
-    tag: "muhasebe",
-    title: "E-fatura ve e-defter süreçlerinde dikkat edilecek noktalar",
-  },
-];
+// Use canonical blog items from blog-items.json
 
 export default function HomeSections() {
   return (

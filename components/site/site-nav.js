@@ -9,11 +9,12 @@ export const SITE_NAV = [
     key: "services",
     label: "Hizmetler",
     children: [
-      { label: "Muhasebe ve mali işler", href: "/hizmetlerimiz/muhasebe-mali-isler-yonetimi" },
-      { label: "Vergi ve beyanname", href: "/hizmetlerimiz/vergi-danismanligi-beyanname" },
-      { label: "Bordrolama ve SGK", href: "/hizmetlerimiz/bordrolama-sgk" },
-      { label: "Finansal raporlama", href: "/hizmetlerimiz/finansal-raporlama" },
-      { label: "KDV iade", href: "/hizmetlerimiz/kdv-iade" },
+  { label: "Muhasebe ve mali işler", href: "/hizmetlerimiz/muhasebe-mali-isler-yonetimi" },
+  { label: "Vergi ve beyanname", href: "/hizmetlerimiz/vergi-danismanligi-beyanname" },
+  { label: "Bordrolama ve SGK", href: "/hizmetlerimiz/bordrolama-sgk" },
+  { label: "Finansal raporlama", href: "/hizmetlerimiz/finansal-raporlama" },
+  { label: "KDV iade", href: "/hizmetlerimiz/kdv-iade" },
+  { label: "Yurt Dışı Dijital Vergi Stratejileri", href: "/hizmetlerimiz/yurt-disi-dijital-vergi-stratejileri" },
     ],
   },
   {
